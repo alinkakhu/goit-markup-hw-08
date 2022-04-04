@@ -1,0 +1,121 @@
+
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts {
+    display: flex;
+}
+
+.logo {
+    color: #000000;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 93px;
+}
+
+.logo__blue {
+    color: $blue-color;
+}
+
+.nav__list,
+.contacts__list {
+    display: flex;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.nav__item,
+.contacts__item {
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.nav__link {
+    color: #212121;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: "Roboto";
+    transition: color 250ms $time-function;
+    position: relative;
+}
+
+
+
+.nav__link,
+.contacts__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.contacts__link {
+    color: rgba(117, 117, 117, 1);
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    letter-spacing: 0.02;
+    font-weight: 500;
+    transition: color 250ms $time-function;
+    &:hover .contacts__icon{
+        fill: $blue-color;
+    }
+    &:focus .contacts__icon{
+        fill: $blue-color;
+    }
+}
+
+.nav__link,
+.nav__link,
+.contacts__link,
+.contacts__link {
+    &:hover,
+    &:focus {
+        color: $blue-color;
+        fill: $blue-color;
+    }
+}
+
+
+
+.nav__link--current {
+    color: $blue-color;
+    &::after{
+position: absolute;
+content: "";
+display: block;
+width: 100%;
+height: 4px;
+background-color: $blue-color;
+bottom: -1px;
+left: 0;
+transition: opacity 250ms $time-function;
+border-radius: 2px;
+    }
+}
+
+.contacts__icon {
+    margin-right: 10px;
+    fill: rgba(117, 117, 117, 1);
+    transition: fill 250ms $time-function;
+}

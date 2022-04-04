@@ -1,0 +1,136 @@
+.subscribe__button {
+    background-color: $blue-color;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    color: white;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    padding: 10px 29px;
+    transition: background-color 250ms $time-function;
+    cursor: pointer;
+    margin-left: 12px;
+    
+    &:hover{
+        background-color: #188ce8;
+    }
+}
+
+
+.subscribe__icon {
+    fill: $white-txt;
+    display: inline-block;
+    margin-left:10px;
+  &:first-child{
+      margin-left: 0px;
+  }
+}
+
+.adress__link {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 1.71;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    text-decoration: none;
+    margin-right: 0;
+}
+
+.adress__link--white {
+    color: $white-txt;
+    
+}
+
+.adress__item {
+    margin-bottom: 9px;
+}
+
+.logo--white {
+    display: block;
+    color: $white-txt;
+    margin-bottom: 20px;
+    margin-right: 0;
+}
+
+.social-links__item--footer {
+    background-color: rgba(255, 255, 255, 0.1); 
+    margin-right: 10px;
+}
+
+.footer-icon {
+    fill: white;
+}
+
+.subscribe input {
+    width: 358px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    background-color: rgba(47, 48, 58, 1);
+    
+}
+
+.footer {
+    color: #ffffff;
+    background-color: #2f323a;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: block;
+}
+
+.footer__list {
+   
+    display: flex;
+    align-items: baseline;
+    
+}
+
+.footer__item {
+    margin-right: 86px;
+    
+   
+}
+
+.footer__title {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.address {
+    font-style: normal;
+}
+
+.subscribe__box {
+  
+    display: flex;
+}
+
+
+.subscribe__button {
+  
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.06em;
+    padding: 10px 29px;
+}
+
+.subscribe__icon {
+    fill: #ffffff;
+    
+}
+form{
+    display: block;
+    margin: 0;
+}
