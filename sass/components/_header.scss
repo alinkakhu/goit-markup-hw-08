@@ -109,6 +109,7 @@
         font-size: 14px;
         line-height: 1.14;
     padding: 32px 0;
+    font-weight: 500;
     }
     }
     
@@ -151,6 +152,7 @@ border-radius: 2px;
     @media screen and (max-width: 767px){
         display: none;
     }
+   
 }
 .header__button{
     top: 1;
@@ -184,7 +186,7 @@ border-radius: 2px;
         left: 0;
         width: 100%;
         background-color: $white-txt;
-
+z-index: 1;
         display: none;
 
         &.is-open {
@@ -280,21 +282,30 @@ border-radius: 2px;
         letter-spacing: 0.02em;
     
         text-decoration: none;
+        &:hover .contacts__icon
+         {
+            color: $blue-color;
+            fill: $blue-color
+        }
+
     
         @media screen and (max-width: 767px) {
             font-size: 24px;
             line-height: 1.17;
-    
+         text-align: left;
             color: #757575;
     
             &--blue {
                 position: absolute;
                 top: 0;
+                left: 0;
                 text-decoration: none;
                 color: $blue-color;
                 font-size: 34px;
                 line-height: 1.18;
                 font-weight: 500;
+                text-align: left;
+             
             }
         }
     
@@ -304,9 +315,9 @@ border-radius: 2px;
     
             font-size: 12px;
             line-height: 1.17;
-    
-            color: $gray-txt;
-            fill: $gray-txt;
+    font-weight: 500;
+            color:rgba(117, 117, 117, 1);
+            fill: rgba(117, 117, 117, 1);
     
             transition: color 250ms $time-function, fill 250ms $time-function;
     
@@ -322,15 +333,28 @@ border-radius: 2px;
                 color: #757575;
                 display: flex;
                 align-items: center;
+                color: #757575;
+                fill: #757575;
+                font-weight: 500;
+                &:hover,
+                &:focus {
+                    color: $blue-color;
+                    fill: $blue-color
+                }
             }
         }
     
         @media screen and (min-width: 1200px) {
             font-size: 14px;
             line-height: 1.14;
-    
+    color:#757575 ;
             padding-top: 32px;
             padding-bottom: 32px;
+            &--blue {
+               
+                font-size: 14px;
+               
+            }
         }
     }
     .header__social-links {
@@ -376,4 +400,7 @@ border-radius: 2px;
             justify-content: space-between;
             align-items: center;
         }
+    }
+    .contacts__link--blue:hover .contacts__icon{
+        fill: $blue-color;
     }

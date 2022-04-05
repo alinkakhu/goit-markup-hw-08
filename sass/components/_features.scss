@@ -47,7 +47,11 @@
     text-transform: uppercase;
     padding-bottom: 10px;
     font-weight: 700;
+    
     text-align: center;
+    @media  screen and (min-width:1200px) {
+        text-align: left;
+    }
 }
 
 
