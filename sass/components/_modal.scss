@@ -10,6 +10,15 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform 250ms $time-function;
+    @media screen and (max-width: 479px) {
+        position: relative;
+        width: auto;
+        margin-right: 15px;
+    }
+    
+    @media screen and (min-width: 480px) {
+        width: 450px;
+    }
 }
 
 .modal__button {

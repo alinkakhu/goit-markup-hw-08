@@ -20,30 +20,68 @@
     <header class="header">
         <div class="container container-header">
             
-            <nav class="nav">
+           <div class="mobile-menu">
     <!-- логотип -->
-                <a class="logo logo--dark" href="">
-                    <span class="logo__blue">Web</span>Studio
-                </a>
-                <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link nav__link--current" href="/goit-markup-hw-04-/index.html">Студия</a></li>
-                    <li class="nav__item"><a class="nav__link" href="portfolio.html">Портфолио</a>
-                    </li>
-                    <li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
-                </ul>
-            </nav>
+            <a class="logo" href="">
+                <span class="logo__blue">Web</span>Studio
+            </a>
 
-
-            <ul class="contacts">
-                <li class="contacts__item"> <a class="contacts__link" href="mailto:info@devstudio.com">
-                        <svg class="contacts__icon" width="16" height="12">
-                            <use href="./images/icons.svg#icon-envelope"></use>
-                        </svg>info@devstudio.com</a></li>
-                <li class="contacts__item"> <a class="contacts__link" href="tel:+38 096 111 11 11">
-                        <svg class="contacts__icon" width="16" height="16">
-                            <use href="./images/icons.svg#icon-phone"></use>
-                        </svg>+38 096 111 11 11</a></li>
+                <button type="button"class ='header__button' data-menu-button aria-expanded="false" aria-controls="header__backdrop">
+                    <svg width = '40' height = '40' aria-label="Переключатель мобидьного меню" class="header__button-icon">
+                        <use href ="images/icons.svg#icon-menu" class="icon-menu">
+                        </use>
+                    <use href="images/icons.svg#icon-close" class="icon-cross">
+                    </use>
+                    </svg>
+                </button>
+           </div>
+<div class="header__backdrop" data-menu id="header__backdrop">
+    <div class="header__menu-container">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link nav__link--current" href="/goit-markup-hw-04-/index.html">Студия</a></li>
+                <li class="nav__item"><a class="nav__link" href="portfolio.html">Портфолио</a>
+                </li>
+                <li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
             </ul>
+        </nav>
+
+        <ul class="contacts">
+            <li class="contacts__item"> <a class="contacts__link" href="mailto:info@devstudio.com">
+                    <svg class="contacts__icon" width="16" height="12">
+                        <use href="./images/icons.svg#icon-envelope"></use>
+                    </svg>info@devstudio.com</a></li>
+            <li class="contacts__item"> <a class="contacts__link--blue" href="tel:+38 096 111 11 11">
+                    <svg class="contacts__icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>+38 096 111 11 11</a></li>
+        </ul>
+
+        <ul class="header__social-links">
+            <li class="header__social-links__item">
+                <a href="https://www.instagram.com/" class="header__social-links-link" target="_blank"
+                    rel="noopener noreferrer nofollow" aria-label="Instagram">Instagram</a>
+            </li>
+            <li class="header__social-links__item">
+                <a href="https://twitter.com/" class="header__social-links-link" target="_blank"
+                    rel="noopener noreferrer nofollow" aria-label="Twitter">Twitter</a>
+            </li>
+            <li class="header__social-links__item">
+                <a href="https://www.facebook.com/" class="header__social-links-link" target="_blank"
+                    rel="noopener noreferrer nofollow" aria-label="Facebook">Facebook</a>
+            </li>
+            <li class="header__social-links__item">
+                <a href="https://www.linkedin.com/" class="header__social-links-link" target="_blank"
+                    rel="noopener noreferrer nofollow" aria-label="LinkedIn">LinkedIn</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+               
+
+
+            
         </div>
        </header>
 
@@ -129,7 +167,7 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__item">
-                        <img class="team__img" src="images/image1.jpg" alt="Игорь Демьяненко" width="270" height="260">
+                        <img class="team__img" src="images/image1.jpg" alt="Игорь Демьяненко" >
                         <div class="team__box">
                             <h3 class="team__name">Игорь Демьяненко</h3>
                             <p class="team__text">Product Designer</p>
@@ -164,7 +202,7 @@
                     </li>
 
                     <li class="team__item">
-                        <img src="images/image2.jpg" alt="Ольга Репина" width="270" height="260">
+                        <img src="images/image2.jpg" class="team__img" alt="Ольга Репина"  >
                         <div class="team__box">
                             <h3 class="team__name">Ольга Репина</h3>
                             <p class="team__text">Frontend Developer</p>
@@ -199,7 +237,7 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="images/image3.jpg" alt="Николай Тарасов" width="270" height="260">
+                        <img src="images/image3.jpg" class="team__img" alt="Николай Тарасов" >
                         <div class="team__box">
                             <h3 class="team__name">Николай Тарасов</h3>
                             <p class="team__text">Marketing</p>
@@ -236,7 +274,7 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="images/image4.jpg" alt="Михаил Ермаков" width="270" height="260">
+                        <img src="images/image4.jpg" class="team__img" c alt="Михаил Ермаков"  >
                         <div class="team__box">
                             <h3 class="team__name">Михаил Ермаков</h3>
                             <p class="team__text">UI Designer</p>
@@ -333,7 +371,7 @@
     <footer class="footer" id="contacts">
 
         <div class="container footer__list">
-
+<div class="tablet">
             <div class="footer__item">
                 <a class="logo logo--white" href="">
                     <span class="logo__blue">Web</span>Studio
@@ -354,7 +392,7 @@
             </div>
 
             <!-- соц.сети -->
-            <div class="footer__item">
+            <div class="footer__item ">
                 <p class="footer__title">Присоединяйтесь</p>
 
             <ul class="social-links">
@@ -385,24 +423,26 @@
                 </li>
             </ul>
             </div>
-
-            <!-- подпишись -->
-<div class="subscribe">
-    <form>
-        <label class="footer__title footer__title--sub" for="subscribe">Подпишитесь на рассылку</label>
-
-        <div class="subscribe__box">
-            <input type="email" name="email" placeholder="E-mail" id="subscribe" />
-
-            <button class="subscribe__button" type="submit">
-                Подписаться
-                <svg class="subscribe__icon" width="24" height="24">
-                    <use href="./images/icons.svg#send"></use>
-                </svg>
-            </button>
-        </div>
-    </form>
 </div>
+            <!-- подпишись -->
+ <form class="subscribe__form">
+          <label class="footer__title footer__title--subscribe" for="subscribe__form">Подпишитесь на рассылку</label>
+          <div class="subscribe__box">
+            <input
+              class="subscribe__input"
+              type="email"
+              id="subscribel"
+              name="subscribel"
+              placeholder="E-mail"
+            />
+            <button class="button__subscribe" type="submit">
+              Подписаться
+              <svg class="subscribe__icon" width="24" height="24">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
 
 </div>
 
@@ -470,6 +510,7 @@
     </form>
 </div>
    </div>
+   <script src="./js/mobile-menu.js"></script>
 <script src="./js/modal.js"></script>
 </body>
 

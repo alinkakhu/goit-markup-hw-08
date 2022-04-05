@@ -21,34 +21,72 @@
     <header class="header">
         <div class="container container-header">
     
-            <nav class="nav">
+            <div class="mobile-menu">
                 <!-- логотип -->
-                <a class="logo logo--dark" href="">
+                <a class="logo" href="">
                     <span class="logo__blue">Web</span>Studio
                 </a>
-                <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link"
-                            href="./index.html">Студия</a></li>
-                    <li class="nav__item"><a class="nav__link nav__link--current" href="portfolio.html">Портфолио</a>
-                    </li>
-                    <li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
-                </ul>
-            </nav>
+    
+                <button type="button" class='header__button' data-menu-button aria-expanded="false"
+                    aria-controls="header__backdrop">
+                    <svg width='40' height='40' aria-label="Переключатель мобидьного меню" class="header__button-icon">
+                        <use href="images/icons.svg#icon-menu" class="icon-menu">
+                        </use>
+                        <use href="images/icons.svg#icon-close" class="icon-cross">
+                        </use>
+                    </svg>
+                </button>
+            </div>
+            <div class="header__backdrop" data-menu id="header__backdrop">
+                <div class="header__menu-container">
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item"><a class="nav__link nav__link--current"
+                                    href="/goit-markup-hw-04-/index.html">Студия</a></li>
+                            <li class="nav__item"><a class="nav__link" href="portfolio.html">Портфолио</a>
+                            </li>
+                            <li class="nav__item"><a class="nav__link" href="#contacts">Контакты</a></li>
+                        </ul>
+                    </nav>
+    
+                    <ul class="contacts">
+                        <li class="contacts__item"> <a class="contacts__link" href="mailto:info@devstudio.com">
+                                <svg class="contacts__icon" width="16" height="12">
+                                    <use href="./images/icons.svg#icon-envelope"></use>
+                                </svg>info@devstudio.com</a></li>
+                        <li class="contacts__item"> <a class="contacts__link--blue" href="tel:+38 096 111 11 11">
+                                <svg class="contacts__icon" width="16" height="16">
+                                    <use href="./images/icons.svg#icon-phone"></use>
+                                </svg>+38 096 111 11 11</a></li>
+                    </ul>
+    
+                    <ul class="header__social-links">
+                        <li class="header__social-links__item">
+                            <a href="https://www.instagram.com/" class="header__social-links-link" target="_blank"
+                                rel="noopener noreferrer nofollow" aria-label="Instagram">Instagram</a>
+                        </li>
+                        <li class="header__social-links__item">
+                            <a href="https://twitter.com/" class="header__social-links-link" target="_blank"
+                                rel="noopener noreferrer nofollow" aria-label="Twitter">Twitter</a>
+                        </li>
+                        <li class="header__social-links__item">
+                            <a href="https://www.facebook.com/" class="header__social-links-link" target="_blank"
+                                rel="noopener noreferrer nofollow" aria-label="Facebook">Facebook</a>
+                        </li>
+                        <li class="header__social-links__item">
+                            <a href="https://www.linkedin.com/" class="header__social-links-link" target="_blank"
+                                rel="noopener noreferrer nofollow" aria-label="LinkedIn">LinkedIn</a>
+                        </li>
+                    </ul>
+    
+                </div>
+            </div>
     
     
-            <ul class="contacts">
-                <li class="contacts__item"> <a class="contacts__link" href="mailto:info@devstudio.com">
-                        <svg class="contacts__icon" width="16" height="12">
-                            <use href="./images/icons.svg#icon-envelope"></use>
-                        </svg>info@devstudio.com</a></li>
-                <li class="contacts__item"> <a class="contacts__link" href="tel:+38 096 111 11 11">
-                        <svg class="contacts__icon" width="16" height="16">
-                            <use href="./images/icons.svg#icon-phone"></use>
-                        </svg>+38 096 111 11 11</a></li>
-            </ul>
+    
+    
         </div>
     </header>
-
 
 
     <main class="portfolio">
@@ -68,7 +106,7 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="overlay-card">
-                            <img src="images/img (9).jpg" alt="Технокряк" width="370" height="295">
+                            <img src="images/img (9).jpg" class="project__img" alt="Технокряк" >
                             <div class="overlay-card__box">
                                 <p class="overlay-card__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -85,7 +123,7 @@
             <li class="project__item">
                 <a href="" class="project__link">
                     <div class="overlay-card">
-                        <img src="images/img (1).jpg" alt="Проект LAB" width="370" height="295">
+                        <img src="images/img (1).jpg" class="project__img" alt="Проект LAB" >
                         <div class="overlay-card__box">
                             <p class="overlay-card__text">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -102,7 +140,7 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="overlay-card">
-                            <img src="images/img (2).jpg" alt="Ресторан Seafood" width="370" height="295">
+                            <img src="images/img (2).jpg" class="project__img" alt="Ресторан Seafood" >
                         <div class="overlay-card__box">
                             <p class="overlay-card__text">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -119,7 +157,7 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="overlay-card">
-                            <img src="images/img (3).jpg" alt="Проект Prime" width="370" height="295">
+                            <img src="images/img (3).jpg" class="project__img" alt="Проект Prime" >
                         <div class="overlay-card__box">
                             <p class="overlay-card__text">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -136,7 +174,7 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="overlay-card">
-                            <img src="images/img (4).jpg" alt="Проект Boxes" width="370" height="295">
+                            <img src="images/img (4).jpg" class="project__img" alt="Проект Boxes" >
                         <div class="overlay-card__box">
                             <p class="overlay-card__text">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -153,7 +191,7 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="overlay-card">
-                            <img src="images/img (5).jpg" alt="Inspiration has no Borders" width="370" height="295">
+                            <img src="images/img (5).jpg" class="project__img" alt="Inspiration has no Borders" >
                             <div class="overlay-card__box">
                                 <p class="overlay-card__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -170,7 +208,7 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="overlay-card">
-                            <img src="images/img (6).jpg" alt="Издание Limited Edition" width="370" height="295">
+                            <img src="images/img (6).jpg" class="project__img" alt="Издание Limited Edition" >
                         <div class="overlay-card__box">
                             <p class="overlay-card__text">
                                 Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -187,7 +225,7 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="overlay-card">
-                            <img src="images/img (7).jpg" alt="Проект LAB" width="370" height="295">
+                            <img src="images/img (7).jpg" class="project__img" alt="Проект LAB" >
                             <div class="overlay-card__box">
                                 <p class="overlay-card__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -204,7 +242,7 @@
                 <li class="project__item">
                     <a href="" class="project__link">
                         <div class="overlay-card">
-                            <img src="images/img (8).jpg" alt="Growing Business" width="370" height="295">
+                            <img src="images/img (8).jpg" class="project__img" alt="Growing Business" >
                             <div class="overlay-card__box">
                                 <p class="overlay-card__text">
                                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это
@@ -221,91 +259,90 @@
             </ul>
             </div>
         </section>
+
 <footer class="footer" id="contacts">
 
     <div class="container footer__list">
+        <div class="tablet">
+            <div class="footer__item">
+                <a class="logo logo--white" href="">
+                    <span class="logo__blue">Web</span>Studio
+                </a>
 
-        <div class="footer__item">
-            <a class="logo logo--white" href="">
-                <span class="logo__blue">Web</span>Studio
-            </a>
+                <address class="adress">
+                    <ul class="adress__list">
 
-            <address class="adress">
-                <ul class="adress__list">
+                        <li class="adress__item">
+                            <a class="adress__link adress__link--white" href="г. Киев, пр-т Леси Украинки, 26">г. Киев,
+                                пр-т Леси Украинки, 26 </a>
+                        </li>
+                        <li class="adress__item"><a class="adress__link"
+                                href="mailto:info@example.com">info@example.com</a>
+                        </li>
+                        <li class="adress__item"><a class="adress__link" href="tel:38 099 111 11 11">+38 099 111 11
+                                11</a></li>
 
-                    <li class="adress__item">
-                        <a class="adress__link adress__link--white" href="г. Киев, пр-т Леси Украинки, 26">г. Киев, пр-т
-                            Леси Украинки,
-                            26</a>
+                    </ul>
+                </address>
+            </div>
+
+            <!-- соц.сети -->
+            <div class="footer__item ">
+                <p class="footer__title">Присоединяйтесь</p>
+
+                <ul class="social-links">
+                    <li class="social-links__item social-links__item--footer">
+                        <a href="" class="social-links__link "><svg class="social-links__icon footer-icon" width="20"
+                                height="20">
+                                <use href="./images/icons.svg#icon-instagram">
+                                </use>
+                            </svg></a>
                     </li>
-                    <li class="adress__item"><a class="adress__link" href="mailto:info@example.com">info@example.com</a>
+
+                    <li class="social-links__item social-links__item--footer">
+                        <a href="" class="social-links__link"><svg class="social-links__icon footer-icon" width="20"
+                                height="20">
+                                <use href="./images/icons.svg#icon-twitter">
+                                </use>
+                            </svg></a>
                     </li>
-                    <li class="adress__item"><a class="adress__link" href="tel:38 099 111 11 11">+38 099 111 11 11</a>
+                    <li class="social-links__item social-links__item--footer">
+                        <a href="" class="social-links__link "><svg class="social-links__icon footer-icon" width="20"
+                                height="20">
+                                <use href="./images/icons.svg#icon-facebook"> </use>
+                            </svg></a>
                     </li>
 
+                    <li class="social-links__item social-links__item--footer">
+                        <a href="" class="social-links__link"><svg class="social-links__icon footer-icon" width="20"
+                                height="20">
+                                <use href="./images/icons.svg#icon-linkedin">
+                                </use>
+                            </svg></a>
+                    </li>
                 </ul>
-            </address>
+            </div>
         </div>
-
-        <!-- соц.сети -->
-        <div class="footer__item">
-            <p class="footer__title">Присоединяйтесь</p>
-
-            <ul class="social-links">
-                <li class="social-links__item social-links__item--footer">
-                    <a href="" class="social-links__link "><svg class="social-links__icon footer-icon" width="20"
-                            height="20">
-                            <use href="./images/icons.svg#icon-instagram">
-                            </use>
-                        </svg></a>
-                </li>
-
-                <li class="social-links__item social-links__item--footer">
-                    <a href="" class="social-links__link"><svg class="social-links__icon footer-icon" width="20"
-                            height="20">
-                            <use href="./images/icons.svg#icon-twitter">
-                            </use>
-                        </svg></a>
-                </li>
-                <li class="social-links__item social-links__item--footer">
-                    <a href="" class="social-links__link "><svg class="social-links__icon footer-icon" width="20"
-                            height="20">
-                            <use href="./images/icons.svg#icon-facebook"> </use>
-                        </svg></a>
-                </li>
-
-                <li class="social-links__item social-links__item--footer">
-                    <a href="" class="social-links__link"><svg class="social-links__icon footer-icon" width="20"
-                            height="20">
-                            <use href="./images/icons.svg#icon-linkedin">
-                            </use>
-                        </svg></a>
-                </li>
-            </ul>
-        </div>
-
         <!-- подпишись -->
-        <div class="subscribe">
-            <form>
-                <label class="footer__title footer__title--sub" for="subscribe">Подпишитесь на рассылку</label>
-
-                <div class="subscribe__box">
-                    <input type="email" name="email" placeholder="E-mail" id="subscribe" />
-
-                    <button class="subscribe__button" type="submit">
-                        Подписаться
-                        <svg class="subscribe__icon" width="24" height="24">
-                            <use href="./images/icons.svg#send"></use>
-                        </svg>
-                    </button>
-                </div>
-            </form>
-        </div>
+        <form class="subscribe__form">
+            <label class="footer__title footer__title--subscribe" for="subscribe__form">Подпишитесь на рассылку</label>
+            <div class="subscribe__box">
+                <input class="subscribe__input" type="email" id="subscribel" name="subscribel" placeholder="E-mail" />
+                <button class="button__subscribe" type="submit">
+                    Подписаться
+                    <svg class="subscribe__icon" width="24" height="24">
+                        <use href="./images/icons.svg#send"></use>
+                    </svg>
+                </button>
+            </div>
+        </form>
 
     </div>
 
     </div>
 </footer>
+
+<script src="./js/mobile-menu.js"></script>
     
 </body>
 
