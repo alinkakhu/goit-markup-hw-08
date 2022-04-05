@@ -1415,6 +1415,12 @@ form {
   cursor: pointer;
 }
 
+@media screen and (max-width: 479px) {
+  .form__checkbox {
+    font-size: 12px;
+  }
+}
+
 .modal__checkbox {
   position: absolute;
   -webkit-appearance: none;
@@ -1523,11 +1529,12 @@ form {
           transform: translate(0%, -50%);
 }
 
-.is-hidden {
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
 }
 
 .filter {
@@ -1625,6 +1632,9 @@ form {
 }
 
 .card {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
@@ -1673,6 +1683,14 @@ form {
 
 .project__link {
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
 }
 
 @media screen and (min-width: 768px) {

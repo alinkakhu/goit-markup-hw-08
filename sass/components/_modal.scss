@@ -19,6 +19,7 @@
     @media screen and (min-width: 480px) {
         width: 450px;
     }
+   
 }
 
 .modal__button {
@@ -117,6 +118,9 @@
     margin-bottom: 30px;
 
     cursor: pointer;
+    @media screen and (max-width: 479px) {
+        font-size: 12px;
+    }
 }
 
 .modal__checkbox {
@@ -221,8 +225,11 @@ border-color: transparent;
     transform: translate(-0%, -50%);
 }
 
-.is-hidden {
+.backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
     transition: opacity 250ms $time-function;
+    
+    
+    z-index: 2;
 }

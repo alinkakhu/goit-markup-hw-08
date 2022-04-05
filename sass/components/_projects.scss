@@ -88,6 +88,8 @@
 // }
 
 .card {
+    flex-grow: 1;
+    
     padding: 20px 24px;
     border-right: 1px solid #eee;
     border-bottom: 1px solid #eee;
@@ -132,9 +134,13 @@
 
 .project__link {
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
    
 }
 .project__item{
+  
     @media screen and (min-width: 768px) {
         width: calc((100% - 60px) / 2);
         margin: 15px;
