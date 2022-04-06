@@ -28,16 +28,19 @@
 section.hero {
     background-color: #2f303a;
     color: $white-txt;
-    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     text-align: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    max-height: 600px;
+    @media screen and (min-width: 1200px) {
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #2f303a;
+height: 600px;}
+    
     @media screen and (max-width: 767px) {
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
             url(../images/Header-mobile.jpg);
@@ -48,6 +51,7 @@ section.hero {
             background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
                 url(../images/Header-mobile2x.jpg);
         }
+    
     }
     
     @media screen and (min-width: 768px) {
@@ -60,6 +64,7 @@ section.hero {
             background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
                 url(../images/Header-tablet2x.jpg);
         }
+       
     }
     
    
@@ -78,9 +83,7 @@ section.hero {
         }
     }
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+   
 }
 
 .hero__button {
@@ -105,4 +108,3 @@ section.hero {
         background-color: #188ce8;
     }
 }
-

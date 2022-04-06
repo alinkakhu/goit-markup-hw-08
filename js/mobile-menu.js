@@ -9,5 +9,16 @@
     menuBtnRef.setAttribute('aria-expanded', !expanded);
 
     mobileMenuRef.classList.toggle('is-open');
+    if (
+      mobileMenuRef.classList.contains('is-open')){
+      menuBtnRef.style.position = 'fixed';
+      menuBtnRef.style.right = '20px';
+      menuBtnRef.style.top = '15x';
+      }
+    else{
+      menuBtnRef.style.position = 'absolute';
+        menuBtnRef.style.right = '0';
+      menuBtnRef.style.top = '1';
+      }
   });
 })();
