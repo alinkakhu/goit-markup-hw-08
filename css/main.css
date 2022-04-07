@@ -815,6 +815,8 @@ section.hero {
 .activity__title {
   line-height: 1.17;
   text-align: center;
+  font-size: 36px;
+  letter-spacing: 0.03;
 }
 
 .activity__text {
@@ -1032,23 +1034,48 @@ section.hero {
   font-family: 'Roboto',sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 42px;
   letter-spacing: 0.03em;
   color: #212121;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .clients__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .clients__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients__list {
+    margin: -15px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
@@ -1056,6 +1083,7 @@ section.hero {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1080,23 +1108,22 @@ section.hero {
   height: 60px;
 }
 
-@media screen and (max-width: 767px) {
-  .clients__item {
-    margin: 15px;
-    width: calc((100% - 60px) / 2);
-  }
+.clients__item {
+  width: calc((100% - 2 * 30px) / 2);
+  margin: 15px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .clients__item {
-    width: calc((100% - 90px) / 3);
+    width: calc((100% - 3 * 30px) / 3);
     margin: 15px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .clients__item:not(:last-child) {
-    margin-right: 30px;
+  .clients__item {
+    width: calc((100% - 6 * 30px) / 6);
+    margin: 15px;
   }
 }
 
@@ -1328,10 +1355,12 @@ form {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background-color: white;
+  width: 450px;
   min-height: 581px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 40px;
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1379,13 +1408,7 @@ form {
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-  margin-top: 40px;
   margin-bottom: 12px;
-}
-
-.form__info {
-  margin-left: 41px;
-  margin-right: 39px;
 }
 
 .form__label {
@@ -1423,7 +1446,7 @@ form {
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  padding: 12px;
+  display: block;
   padding-left: 42px;
 }
 
@@ -1465,6 +1488,9 @@ form {
 }
 
 .form__checkbox {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1474,9 +1500,7 @@ form {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 14px;
-  line-height: 2;
-  text-align: center;
+  margin-top: 20px;
   margin-bottom: 30px;
   cursor: pointer;
 }
@@ -1484,6 +1508,14 @@ form {
 @media screen and (max-width: 479px) {
   .form__checkbox {
     font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .form__checkbox {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -1507,7 +1539,6 @@ form {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.88;
-  margin-bottom: 40px;
   cursor: pointer;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
